@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers Game</title>
+    <style>
+        ::selection {
+            user-select: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        h1 {
+            color: darkslategrey;
+            margin-bottom: 20px;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .green {
+            background-color: green;
+            pointer-events: none;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Numbers Game</h1>
+
+    <div id="timer">Qalan vaxt: <span id="time">60</span> saniye</div>
+
+    <table>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <button style="background-color: dodgerblue;" onclick="startGame()">Start Game</button>
+    <button style="background-color: dodgerblue; display: none;" id="restartButton" onclick="restartGame()">New Game
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
